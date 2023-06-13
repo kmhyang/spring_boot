@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>전체 사원 조회</title>
+<script th:inline="javascript">
+	function getCtx(){
+		return /*[[${#httpServletRequest.getContextPath()}]]*/''; //http://localhost:8089/test/empList
+	}
+</script>
 </head>
 <body>
 	<div>
