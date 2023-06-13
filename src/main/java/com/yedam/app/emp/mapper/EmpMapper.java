@@ -15,6 +15,8 @@ public interface EmpMapper {
 	public int insertEmp(EmpVO vo);
 	
 	//수정
+	public int updateEmp(EmpVO vo);
 	
 	//삭제
+	public int deleteEmp(EmpVO vo);
 }

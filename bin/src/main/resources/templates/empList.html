@@ -16,7 +16,6 @@
 		<table>
 			<thead>
 				<tr>
-					<th></th>
 					<th>employee_id</th>
 					<th>name</th>
 					<th>job_id</th>
@@ -26,9 +25,9 @@
 			<tbody>
 					<!-- <tr th:each="emp, state : ${empList}" th:id="${state.index}"> -->
 				<th:block th:each="emp, state : ${empList}">
-					<tr th:id="${state.index}"><!-- @{/key = value &key = value} -->
-						<td><input type="checkbox" value="${emp.employeeId}"></td>
-						<td th:text="${emp.employeeId}" th:onclick="|location.href='@{/empInfo(employeeId=${emp.employeeId})}'|"/>
+					<tr th:id="${state.index}" 
+							th:onclick="|location.href='@{/empInfo(employeeId=${emp.employeeId})}'|"><!-- @{/key = value &key = value} -->
+						<td th:text="${emp.employeeId}" />
 						<td th:text="${#strings.isEmpty(emp.firstName) ? emp.lastName : emp.lastName + '_' + emp.firstName}" />
 						<td>[[${emp.jobId}]]</td>
 						<td>[[${#dates.format(emp.hireDate, 'yyyy년MM월dd일')}]]</td>

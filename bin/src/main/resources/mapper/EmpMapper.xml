@@ -46,16 +46,4 @@
 										,#{jobId}
 								)
 	</insert>
-	<update id="updateEmp" parameterType="EmpVO">
-		UPDATE employees
-		SET			first_name
-						, last_name
-						, email
-		WHERE employee_id = #{employeeId}
-	</update>
-	
-	<delete id="deleteEmp" parameterType="EmpVO">
-		DELETE employees
-		WHERE employee_id = #{employeeId}
-	</delete>
 </mapper>

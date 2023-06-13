@@ -40,4 +40,20 @@ public class EmpController {
 		empService.insertEmpInfo(vo);
 		return "redirect:empList";
 	}
+	
+	//수정 페이지
+	@GetMapping("empUpdate")
+	public String empUpdateForm(EmpVO vo, Model model) {
+		model.addAttribute("empInfo",empService.getEmpInfo(vo));
+		return "empUpdate";
+	}
+	
+	//수정 처리
+	
+	//삭제
+	@PostMapping("empDelete")
+	public String empDelete(EmpVO vo) {
+		empService.deleteEmpInfo(vo);
+		return "redirect:empList";
+	}
 }
