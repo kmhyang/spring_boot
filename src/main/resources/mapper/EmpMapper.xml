@@ -5,26 +5,26 @@
 <mapper namespace="com.yedam.app.emp.mapper.EmpMapper">
 	<!-- 전체조회 -->
 	<select id="selectEmpList" resultType="EmpVO">
-		SELECT EMPLOYEE_ID,
-					FIRST_NAME,
-					LAST_NAME,
-					EMAIL,
-					HIRE_DATE,
-					JOB_ID,
-					DEPARTMENT_ID
+		SELECT employee_id,
+					first_name,
+					last_name,
+					email,
+					hire_date,
+					job_id,
+					department_id
 		FROM  employees
 		ORDER BY 1 DESC
 	</select>
 
 	<!-- 단건조회 -->
 	<select id="selectEmpInfo" parameterType="int">
-		SELECT  EMPLOYEE_ID,
-						FIRST_NAME,
-						LAST_NAME,
-						EMAIL,
-						HIRE_DATE,
-						JOB_ID,
-						DEPARTMENT_ID
+		SELECT  employee_id,
+						first_name,
+						last_name,
+						email,
+						hire_date,
+						job_id,
+						department_id
 		FROM employees
 		WHERE employee_id=#{employeeId}
 	</select>
