@@ -42,7 +42,7 @@
 										#{employeeId}
 										,#{lastName}
 										,#{email}
-										,#{hireDate}
+										,sysdate
 										,#{jobId}
 								)
 	</insert>

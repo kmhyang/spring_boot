@@ -30,7 +30,8 @@ public class EmpController {
 	
 	//등록 페이지
 	@GetMapping("empInsert")
-	public void empInsertForm() { //void : 경로를 기반하여 찾아옴.
+	public void empInsertForm(Model model) { //void : 경로를 기반하여 찾아옴.
+		model.addAttribute("vo", new EmpVO());
 	}
 	
 	//등록 처리

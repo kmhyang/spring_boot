@@ -11,7 +11,7 @@
 			<thead>
 				<tr>
 					<th>employee_id</th>
-					<th>first_name</th>
+					<th>name</th>
 					<th>job_id</th>
 					<th>hire_date</th>
 				</tr>
@@ -22,7 +22,7 @@
 					<tr th:id="${state.index}" 
 							th:onclick="|location.href='@{/empInfo(employeeId=${emp.employeeId})}'|"><!-- @{/key = value &key = value} -->
 						<td th:text="${emp.employeeId}" />
-						<td th:text="${emp.firstName}" />
+						<td th:text="${#strings.isEmpty(emp.firstName) ? emp.lastName : emp.lastName + '_' + emp.firstName}" />
 						<td>[[${emp.jobId}]]</td>
 						<td>[[${#dates.format(emp.hireDate, 'yyyy년MM월dd일')}]]</td>
 					</tr>
