@@ -25,5 +25,4 @@ class Ex230613ApplicationTests {
 			System.out.println(enyStr);
 		}
 	}
-
 }
