@@ -35,6 +35,7 @@ public class EmpController {
 	}
 	
 	//등록 처리
+	//엑셀 파일 받아서 등록
 	@PostMapping("empInsert")
 	public String empInsert(EmpVO vo) {
 		empService.insertEmpInfo(vo);

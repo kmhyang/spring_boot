@@ -27,7 +27,7 @@
 					<!-- <tr th:each="emp, state : ${empList}" th:id="${state.index}"> -->
 				<th:block th:each="emp, state : ${empList}">
 					<tr th:id="${state.index}"><!-- @{/key = value &key = value} -->
-						<td><input type="checkbox" value="${emp.employeeId}"></td>
+						<td><input name="check_box" type="checkbox" value="${emp.employeeId}"></td>
 						<td th:text="${emp.employeeId}" th:onclick="|location.href='@{/empInfo(employeeId=${emp.employeeId})}'|"/>
 						<td th:text="${#strings.isEmpty(emp.firstName) ? emp.lastName : emp.lastName + '_' + emp.firstName}" />
 						<td>[[${emp.jobId}]]</td>
@@ -36,5 +36,9 @@
 				</th:block>
 			</tbody>
 		</table>
+
+<script>
+
+</script>
 </body>
 </html>
